@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer .footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer .footer-links a svg {
+    width: 30px;
+    height: 30px;
+    color: #ccd6f6;
+}

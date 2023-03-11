@@ -1,0 +1,29 @@
+/* section skill */
+.section-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #2E2E2E;
+}
+
+.skills {
+    width: 100%;
+    padding: 0.75em 0.75em;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px;
+}
+
+.skills ul li {
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.skills ul li svg {
+    font-size: 8rem;
+    color: #3399FF;
+}

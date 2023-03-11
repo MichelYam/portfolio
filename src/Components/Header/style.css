@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,100;1,200&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: 100px;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar__items {
+    list-style: none;
+    margin: 25px;
+}
+
+.item {
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* text-transform: uppercase; */
+    width: 100%;
+    font-size: 24px;
+}
+
+.item:hover {
+    color: var(--color);
+}
+
+.item:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -10px;
+    left: 0;
+    background: var(--color);
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+
+.item:hover:before, .item:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.lang {
+    position: absolute;
+    top: 43px;
+    right: 5%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang span {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.landing {
+    width: 100%;
+    height: 100vh;
+}
+
+.landing-img {
+    width: 100%;
+    height: 100%;
+}
+
+.landing img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+/* @media (max-width: 850px) {
+    .landing img {
+        width: 100%;
+    }
+} */
+
+.landing__content {
+    position: absolute;
+    font-size: 24px;
+    color: var(--white);
+    left: 8%;
+    top: 32%;
+}
+
+
+.landing__content .text-zone .fancy {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: #ccd6f6;
+}
+
+.landing__content .text-zone .fancy span:nth-child(2) {}
+
+.landing__content .text-zone .fancy span:nth-child(3) {
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.landing__content h2 {
+    margin-bottom: 10px;
+}
+
+/* .landing__content::after{
+    content: '';
+    height: 3px;
+    border: 1px solid var(--white);
+    margin-left: 10px;
+} */
+
+.landing__content p {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    width: 150px;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    border: 1px solid transparent;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    transform: translateY(calc(var(--nav-scroll-height) * -1));
+    height: var(--nav-scroll-height);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.active {
+    height: var(--nav-scroll-height);
+    transform: translateY(0px);
+    background-color: #1d1d1d;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+/* .fadeIn {
+    animation: fadeInAnimation 1s linear;
+}
+
+.fadeIn {
+    animation: fadeInAnimation 1s linear;
+} */
+
+.fadeIn {
+    animation: fadeInTop 1s ease-in both;
+    /* visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; */
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
