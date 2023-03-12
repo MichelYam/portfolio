@@ -119,3 +119,13 @@ span.fade{
 
 
 /* .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both} */
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 100px 50px;
+    }
+
+    .section-contact {
+        margin: 0;
+    }
+}

@@ -79,3 +79,9 @@
     max-width: 1600px;
     /* min-height: 100vh; */
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+}

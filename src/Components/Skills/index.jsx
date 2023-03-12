@@ -38,7 +38,6 @@ const Skills = () => {
                 >
                     {skills.map((item, index) => {
                         const Icon = item;
-                        console.log(item);
                         return (
                             <motion.li key={index} variants={textAnimate}>
                                 <Icon />

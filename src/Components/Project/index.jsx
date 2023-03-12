@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import "./style.css"
@@ -17,6 +17,10 @@ const animation = {
 }
 
 const Index = ({ title, context, description, keyword, img, site, github }) => {
+    const [currentImage, setCurrentImage] = useState("");
+    import(`../../assets/img/projects/${img}.png`).then((image) =>
+        setCurrentImage(image.default)
+    );
     return (
         <>
             {/* <Modal onClose={toggleModal} open={isOpen}>
@@ -49,7 +53,7 @@ const Index = ({ title, context, description, keyword, img, site, github }) => {
             >
                 <div className='project-img'>
                     <a href="#">
-                        <img src={`./assets/img/projects/${img}.png`} alt={title} />
+                        <img src={currentImage} alt={title} />
                     </a>
                 </div>
                 <div className="project-content">

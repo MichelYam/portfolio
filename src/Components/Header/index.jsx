@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
+import imgBg from "../../assets/img/bg.png"
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 import './style.css'
 
@@ -48,29 +50,34 @@ const Index = () => {
             };
         }
     }, [lastScrollY]);
+    const [isOpen, setIsOpen] = useState(false)
 
-
+    const handleClick = () => setIsOpen(!isOpen);
+    const Close = () => setIsOpen(false);
     return (
         <header>
+            <nav className={`navbar ${!show ? "hidden" : lastScrollY === 0 ? "" : "active"} ${isOpen ? "open" : ""}`}>
+                <div className="toggle" onClick={handleClick} >
+                    {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+                </div>
+                <ul className={"navbar__container"}>
+                    {
+                        navRoute.map((item, index) => {
+                            return (<li key={index} className="navbar__items fadeIn" style={{ animationDelay: `${index * 100}ms` }}>
+                                <a className="item" href={`#${item}`}>{item}</a>
+                            </li>)
+                        })
+                    }
+                    {/* <div className='lang'>
+                        <span>FR</span>
+                        <span>ENG</span>
+                    </div> */}
+                </ul>
+            </nav>
             <div className="landing">
                 <div className='landing-img'>
-                    <img src="./assets/img/bg.png" alt="" />
+                    <img src={imgBg} alt="" />
                 </div>
-                <nav className={`navbar ${!show ? "hidden" : lastScrollY === 0 ? "" : "active"}`}>
-                    <ul className="navbar__container">
-                        {
-                            navRoute.map((item, index) => {
-                                return (<li key={index} className="navbar__items fadeIn" style={{ animationDelay: `${index * 100}ms` }}>
-                                    <a className="item" href={`#${item}`}>{item}</a>
-                                </li>)
-                            })
-                        }
-                        <div className='lang'>
-                            <span>FR</span>
-                            <span>ENG</span>
-                        </div>
-                    </ul>
-                </nav>
                 <div className="landing__content">
                     <motion.div
                         className="text-zone"
@@ -90,7 +97,7 @@ const Index = () => {
                                 WEB DEVELOPER
                             </motion.span>
                         </h1>
-                        <motion.div className='flex' variants={textAnimate}>
+                        <motion.div className='btn-info' variants={textAnimate}>
                             <button className='btn'>
                                 Hire me
                             </button>
@@ -106,33 +113,3 @@ const Index = () => {
 }
 
 export default Index
-
-
-    // const text = document.querySelector(".fancy");
-    // console.log(text)
-    // const strText = text.textContent;
-    // // const strText = text.ariaLabel;
-    // const splitText = strText.split("");
-
-    // for (let i = 0; i < splitText.length; i++) {
-    //     text.innerHTML += "<span>" + splitText[i] + "</span>"
-    // }
-
-    // let char = 0;
-    // let timer = setInterval(onTick, 50)
-
-
-    // function onTick() {
-    //     const span = text.querySelectorAll('span')[char]
-    //     span.classList.add('fade');
-    //     char++
-    //     if (char === splitText.length) {
-    //         complete();
-    //         return;
-    //     }
-    // }
-
-    // function complete() {
-    //     clearInterval(timer);
-    //     timer = null;
-    // }
