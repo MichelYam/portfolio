@@ -42,8 +42,7 @@ const Index = () => {
                 >
                     <h2>About me</h2>
                     <p>
-                        Mauris quis condimentum turpis. Sed porta, risus sit amet mattis iaculis, turpis arcu tincidunt eros, quis luctus eros metus at mauris.
-                        Integer sagittis, tellus at facilisis tincidunt, tortor libero luctus urna, sit amet sodales libero nisi vel nisl. Praesent in tincidunt tortor.
+                        Bonjour! je m'appelle Michel, passioné par le developpement web
                     </p>
                 </motion.div>
                 <motion.div className='charts' variants={fadeRight}>
