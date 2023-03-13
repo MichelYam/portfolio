@@ -99,10 +99,14 @@ const Index = () => {
                         </h1>
                         <motion.div className='btn-info' variants={textAnimate}>
                             <button className='btn'>
-                                Hire me
+                                <a href="mailto:michel.yam92@gmail.com" rel='noopener noreferrer' target="_blank">
+                                    Hire me
+                                </a>
                             </button>
                             <button className='btn'>
-                                Resume
+                                <a href="../../data/CV_Michel_YAM.pdf" download>
+                                    Resume
+                                </a>
                             </button>
                         </motion.div>
                     </motion.div>

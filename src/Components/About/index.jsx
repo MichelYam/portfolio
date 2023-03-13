@@ -42,7 +42,9 @@ const Index = () => {
                 >
                     <h2>About me</h2>
                     <p>
-                        Bonjour! je m'appelle Michel, passioné par le developpement web
+                        Bonjour! je m'appelle Michel, passioné par le developpement web,
+                        après une formation sur React pour me spécialiser côté Front-End,
+                        je suis actuellement à la recherche d’une première expérience dans le monde du travail. Motivé et dynamique, je me tiens disponible pour un entretien.
                     </p>
                 </motion.div>
                 <motion.div className='charts' variants={fadeRight}>
