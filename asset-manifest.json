@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3aa64768.css",
+    "main.js": "/static/js/main.c6bcee92.js",
+    "static/js/511.7cd1d1bf.chunk.js": "/static/js/511.7cd1d1bf.chunk.js",
+    "static/js/382.fe155b9f.chunk.js": "/static/js/382.fe155b9f.chunk.js",
+    "static/js/527.2fff49b9.chunk.js": "/static/js/527.2fff49b9.chunk.js",
+    "static/js/55.41ac9aa4.chunk.js": "/static/js/55.41ac9aa4.chunk.js",
+    "static/js/346.9eed3bc3.chunk.js": "/static/js/346.9eed3bc3.chunk.js",
+    "static/media/argentbank.png": "/static/media/argentbank.ead8ee2305cef7967e65.png",
+    "static/media/hrnet.png": "/static/media/hrnet.8fa3a3bcf7f03d819859.png",
+    "static/media/bg.png": "/static/media/bg.6e6c5385f24a30a7cfe6.png",
+    "static/media/billed.png": "/static/media/billed.54709844d99b3f4b793e.png",
+    "static/media/sportsee.png": "/static/media/sportsee.7242d926d0be6c13dc61.png",
+    "static/media/learn@home.png": "/static/media/learn@home.499f9030805579bd20af.png",
+    "static/media/test.png": "/static/media/test.7e6fec1fbd72e227a1f7.png",
+    "index.html": "/index.html",
+    "main.3aa64768.css.map": "/static/css/main.3aa64768.css.map",
+    "main.c6bcee92.js.map": "/static/js/main.c6bcee92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3aa64768.css",
+    "static/js/main.c6bcee92.js"
+  ]
+}

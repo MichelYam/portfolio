@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[527],{527:function(t,e,f){t.exports=f.p+"static/media/hrnet.8fa3a3bcf7f03d819859.png"}}]);
