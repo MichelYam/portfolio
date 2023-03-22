@@ -150,11 +150,11 @@
 }
 
 .btn:hover {
-    color: #000;
     border: 1px solid transparent;
-    background: #fff;
+    background: #3399FF;
     transition: 0.5s;
 }
+
 
 .btn-info {
     display: flex;
@@ -279,7 +279,8 @@
 }
 
 /* responsive mobile */
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
 
 /* responsive tablette */
 @media screen and (max-width:992px) {}

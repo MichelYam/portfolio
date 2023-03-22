@@ -6,11 +6,26 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import './style.css'
 
 const navRoute = [
-    "Home",
-    "About me",
-    "Skills",
-    "Projects",
-    "Contact",
+    {
+        label: "home",
+        value: "Accueil",
+    },
+    {
+        label: "about",
+        value: "À propos",
+    },
+    {
+        label: "skills",
+        value: "Compétences",
+    },
+    {
+        label: "projects",
+        value: "Projets",
+    },
+    {
+        label: "contact",
+        value: "Contacte",
+    }
 ]
 
 
@@ -64,7 +79,7 @@ const Index = () => {
                     {
                         navRoute.map((item, index) => {
                             return (<li key={index} className="navbar__items fadeIn" style={{ animationDelay: `${index * 100}ms` }}>
-                                <a className="item" href={`#${item}`}>{item}</a>
+                                <a className="item" href={`#${item.label}`}>{item.value}</a>
                             </li>)
                         })
                     }
@@ -94,18 +109,18 @@ const Index = () => {
                                 Michel
                             </motion.span>
                             <motion.span variants={textAnimate}>
-                                WEB DEVELOPER
+                                Développeur web
                             </motion.span>
                         </h1>
                         <motion.div className='btn-info' variants={textAnimate}>
                             <button className='btn'>
                                 <a href="mailto:michel.yam92@gmail.com" rel='noopener noreferrer' target="_blank">
-                                    Hire me
+                                    Contactez-moi
                                 </a>
                             </button>
                             <button className='btn'>
                                 <a href="../../data/CV_Michel_YAM.pdf" download>
-                                    Resume
+                                    CV
                                 </a>
                             </button>
                         </motion.div>

@@ -22,9 +22,9 @@ const Contacts = () => {
                 variants={animation}
                 transition={{ delay: 0.5 }}
             >
-                <h2 className='title'>Get In Touch</h2>
-                <p>I'm currently looking for new opportunities, my inbox is always open. If you have a question do not hesitate to contact me, I will answer you as soon as possible.</p>
-                <a className="email" href="mailto:michel.yam92@gmail.com" rel='noopener noreferrer' target="_blank">Contact me</a>
+                <h2 className='title'>Contactez-moi</h2>
+                <p>Je suis actuellement à la recherche d'une première expérience, ma boîte mail est toujours ouverte. Si vous avez une question n'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.</p>
+                <a className="email" href="mailto:michel.yam92@gmail.com" rel='noopener noreferrer' target="_blank">Contactez-moi</a>
             </motion.div>
         </>
     )

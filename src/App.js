@@ -6,10 +6,13 @@ import Skills from './Components/Skills';
 import Contacts from './Components/Contacts';
 import Footer from './Components/Footer';
 
-import { projects, skills } from './data/data'
+import { projects } from './data/data'
+
+import { Helmet } from 'react-helmet-async';
+
 import './App.css';
 //mockData
-function scrollReveal() {
+const scrollReveal = () => {
   var revealPoint = 150;
   var revealElement = document.querySelectorAll(".demo");
   for (var i = 0; i < revealElement.length; i++) {
@@ -31,18 +34,22 @@ function App() {
   const currentYear = new Date().getFullYear()
   return (
     <>
+      <Helmet>
+        <title>Portfolio Michel YAM</title>
+        <meta name='description' content='Michel YAM, développeur web' data-react-helmet="true" />
+      </Helmet>
       <Header />
       <main>
-        <section className="section section-about">
+        <section id='about' className="section section-about">
           <AboutMe />
         </section>
-        <section className='section section-skills'>
+        <section id='skills' className='section section-skills'>
           <Skills />
         </section>
-        <section className="section section-projects">
+        <section id='projects' className="section section-projects">
           <Projects projects={projects} />
         </section>
-        <section className="section section-contact">
+        <section id='contact' className="section section-contact">
           <Contacts />
         </section>
       </main>
