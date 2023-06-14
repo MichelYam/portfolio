@@ -23,26 +23,6 @@ const Index = ({ title, context, description, keyword, img, site, github }) => {
     );
     return (
         <>
-            {/* <Modal onClose={toggleModal} open={isOpen}>
-                <div className='modal-title'>
-                    {title}
-                </div>
-                <div className='modal-content'>
-                    {description}
-                </div>
-                <div className='keyword'>
-                    {keyword.map((item, index) =>
-                        <span key={index} className="keyword-item">{item}</span>
-                    )}
-                </div>
-            </Modal> */}
-            {/* <div className='project-item'>
-                <div className="project-item-content" onClick={() => setIsOpen(true)}>
-                    <img src={`./assets/img/projects/${img}.png`} alt={title} />
-                    <span>{title}</span>
-                </div>
-            </div> */}
-
             <motion.div
                 className="project-item"
                 variants={animation}
@@ -58,9 +38,7 @@ const Index = ({ title, context, description, keyword, img, site, github }) => {
                 </div>
                 <div className="project-content">
                     <h3 className='project-title'>
-                        <a href="#">
-                            {title}
-                        </a>
+                        {title}
                     </h3>
                     <div className='project-description'>
                         <p>{context}</p>

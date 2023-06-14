@@ -11,6 +11,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
 }
 
 code {
@@ -20,4 +22,50 @@ code {
 
 #root {
   overflow: hidden;
+}
+
+.dark {
+  background-color: #333;
+  color: #acabab;
+}
+
+.light {
+  background: #e5e4e4;
+  color: #333;
+
+}
+
+.light .landing .landing-img img {
+  opacity: 1;
+}
+
+.light .navbar.active {
+  background: #e5e4e4;
+}
+
+.light section, .light .project-description {
+  background: #e5e4e4;
+  color: #333;
+}
+
+.light .project-tech-list li {
+  color: #333;
+}
+
+.light .project-links a svg {
+  color: #333;
+
+}
+
+.light .footer .footer-links a svg {
+  color: #333;
+
+}
+
+.light .section-skills {
+  background: #acabab;
+}
+
+.light h3 {
+  color: #333;
 }

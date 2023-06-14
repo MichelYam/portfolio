@@ -1,33 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import imgBg from "../../assets/img/bg.png"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 import './style.css'
-
-const navRoute = [
-    {
-        label: "home",
-        value: "Accueil",
-    },
-    {
-        label: "about",
-        value: "À propos",
-    },
-    {
-        label: "skills",
-        value: "Compétences",
-    },
-    {
-        label: "projects",
-        value: "Projets",
-    },
-    {
-        label: "contact",
-        value: "Contacte",
-    }
-]
-
+import { ThemeContext } from '../../Context/Theme';
 
 const textAnimate = {
     offscreen: { y: 30, opacity: 0 },
@@ -40,9 +17,10 @@ const textAnimate = {
         }
     }
 }
-const Index = () => {
+const Index = ({ navRoute }) => {
     const [show, setShow] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0);
+    const { toggleTheme } = useContext(ThemeContext)
     const controlNavbar = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
@@ -75,7 +53,7 @@ const Index = () => {
                 <div className="toggle" onClick={handleClick} >
                     {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
                 </div>
-                <ul className={"navbar__container"}>
+                <ul className="navbar__container">
                     {
                         navRoute.map((item, index) => {
                             return (<li key={index} className="navbar__items fadeIn" style={{ animationDelay: `${index * 100}ms` }}>
@@ -88,6 +66,14 @@ const Index = () => {
                         <span>ENG</span>
                     </div> */}
                 </ul>
+                <div className="theme">
+                    <i className="fas fa-sun"></i>
+                    <label className="switch" htmlFor="toggle">
+                        <input id="toggle" type="checkbox" name='toggle' onClick={toggleTheme} />
+                        <span className="slider round"></span>
+                    </label>
+                    <i className="fas fa-moon"></i>
+                </div>
             </nav>
             <div className="landing">
                 <div className='landing-img'>
