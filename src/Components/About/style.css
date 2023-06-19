@@ -5,6 +5,7 @@
 .about-container {
     width: 100%;
     display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: space-around;
 }
@@ -13,27 +14,31 @@
     width: 40%;
 }
 
-.section-about .charts {
-    width: 700px;
-    height: 700px;
+.section-about .img-custom {
+    width: 500px;
+    height: 500px;
     border-radius: 51% 49% 78% 22% / 30% 30% 70% 70%;
     /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(3, 2, 52, 1) 5%, rgba(3, 2, 55, 1) 6%, rgba(4, 3, 65, 1) 9%, rgba(5, 4, 74, 1) 12%, rgba(6, 6, 90, 1) 17%, rgba(9, 9, 121, 1) 27%, rgba(8, 28, 134, 1) 33%, rgba(7, 47, 147, 1) 40%, rgba(6, 80, 169, 1) 52%, rgba(5, 97, 180, 1) 58%, rgba(4, 130, 201, 1) 70%, rgba(3, 152, 215, 1) 78%, rgba(2, 168, 226, 1) 84%, rgba(2, 179, 233, 1) 88%, rgba(0, 212, 255, 1) 100%); */
     /* ; */
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
     display: flex;
     align-items: center;
 }
 
-.section-about .container-img {
+/* .section-about img {
     width: 500px;
     height: 500px;
     margin: auto;
-}
+} */
 
-.section-about .charts img {
+.section-about .img-custom img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 51% 49% 78% 22% / 30% 30% 70% 70%;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
 }
 
 @media screen and (max-width:992px) {

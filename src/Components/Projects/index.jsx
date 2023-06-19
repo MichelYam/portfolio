@@ -9,12 +9,10 @@ export default function Projects({ projects }) {
             <div className='section-title'>
                 <h2>Projets</h2>
             </div>
-            <div className='container'>
-                <div className="project-list">
-                    {projects.map((project, index) => (
-                        <Project key={index} {...project} />
-                    ))}
-                </div>
+            <div className="project-list">
+                {projects.map((project, index) => (
+                    <Project key={index} {...project} />
+                ))}
             </div>
         </>
     )

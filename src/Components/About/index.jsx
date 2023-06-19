@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import img from '../../assets/img/test.png'
+import Skills from "../Skills/index"
+// import img from '../../assets/img/test.png'
 import './style.css'
+import img from "../../assets/img/lucas-kapla.jpg"
 
 const fadeLeft = {
     offscreen: { x: -30, opacity: 0 },
@@ -42,17 +44,17 @@ const Index = () => {
                 >
                     <h2>About me</h2>
                     <p>
-                        Bonjour! je m'appelle Michel, passioné par le developpement web,
+                        Bonjour ! je m'appelle Michel, passioné par le developpement web,<br />
                         après une formation sur React pour me spécialiser côté Front-End,
                         je suis actuellement à la recherche d’une première expérience dans le monde du travail. Motivé et dynamique, je me tiens disponible pour un entretien.
                     </p>
+                    <motion.div variants={fadeRight}>
+                        <Skills />
+                    </motion.div>
                 </motion.div>
-                <motion.div className='charts' variants={fadeRight}>
-                    <div className='container-img'>
-                        <img src={img} alt="" />
-                    </div>
+                <motion.div className='img-custom' variants={fadeRight}>
+                    <img src={img} alt="image" />
                 </motion.div>
-
             </motion.div>
         </>
     )

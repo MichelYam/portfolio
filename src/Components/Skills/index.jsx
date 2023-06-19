@@ -1,7 +1,13 @@
 import React from 'react'
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiTypescript } from "react-icons/si";
 import { motion } from "framer-motion"
+import html from '../../assets/img/icon/html.svg'
+import css from '../../assets/img/icon/css.svg'
+import react from '../../assets/img/icon/react.svg'
+import js from '../../assets/img/icon/js.svg'
+import typescript from '../../assets/img/icon/typescript.svg'
+import redux from '../../assets/img/icon/redux.svg'
+import mongodb from '../../assets/img/icon/mongodb.svg'
+import nodejs from '../../assets/img/icon/nodejs.svg'
 import './style.css'
 
 const textAnimate = {
@@ -15,20 +21,20 @@ const textAnimate = {
         }
     }
 }
-export const skills = [
-    FaHtml5,
-    FaCss3Alt,
-    FaJsSquare,
-    FaReact,
-    SiTypescript,
-    FaNodeJs,
+const skills = [
+    html,
+    css,
+    js,
+    react,
+    typescript,
+    nodejs,
+    redux,
+    mongodb,
 ]
 const Skills = () => {
     return (
         <>
-            <div className='section-title'>
-                <h2>Skills</h2>
-            </div>
+            <p>Voici quelques technologies avec lesquelles j'ai travaillé :</p>
             <div className="skills">
                 <motion.ul
                     initial={"offscreen"}
@@ -36,14 +42,13 @@ const Skills = () => {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ staggerChildren: 0.2 }}
                 >
-                    {skills.map((item, index) => {
-                        const Icon = item;
-                        return (
-                            <motion.li key={index} variants={textAnimate}>
-                                <Icon />
-                            </motion.li>
-                        )
-                    })}
+                    {skills.map((item, index) => (
+                        <motion.li key={index} variants={textAnimate}>
+                            <div className='icon-shape'>
+                                <img className='icon' src={item} alt={item} />
+                            </div>
+                        </motion.li>
+                    ))}
                 </motion.ul>
             </div>
         </>

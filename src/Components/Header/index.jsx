@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { motion } from "framer-motion";
-import imgBg from "../../assets/img/bg.png"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 import './style.css'
@@ -61,10 +60,6 @@ const Index = ({ navRoute }) => {
                             </li>)
                         })
                     }
-                    {/* <div className='lang'>
-                        <span>FR</span>
-                        <span>ENG</span>
-                    </div> */}
                 </ul>
                 <div className="theme">
                     <i className="fas fa-sun"></i>
@@ -75,45 +70,7 @@ const Index = ({ navRoute }) => {
                     <i className="fas fa-moon"></i>
                 </div>
             </nav>
-            <div className="landing">
-                <div className='landing-img'>
-                    <img src={imgBg} alt="" />
-                </div>
-                <div className="landing__content">
-                    <motion.div
-                        className="text-zone"
-                        initial={"offscreen"}
-                        whileInView={"onscreen"}
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ staggerChildren: 0.5 }}
-                    >
-                        <h1 className="fancy">
-                            <motion.span variants={textAnimate}>
-                                YAM
-                            </motion.span>
-                            <motion.span variants={textAnimate}>
-                                Michel
-                            </motion.span>
-                            <motion.span variants={textAnimate}>
-                                Développeur web
-                            </motion.span>
-                        </h1>
-                        <motion.div className='btn-info' variants={textAnimate}>
-                            <button className='btn'>
-                                <a href="mailto:michel.yam92@gmail.com" rel='noopener noreferrer' target="_blank">
-                                    Contactez-moi
-                                </a>
-                            </button>
-                            <button className='btn'>
-                                <a href="../../data/CV_Michel_YAM.pdf" download>
-                                    CV
-                                </a>
-                            </button>
-                        </motion.div>
-                    </motion.div>
-                </div>
-            </div>
-        </header >
+        </header>
     )
 }
 

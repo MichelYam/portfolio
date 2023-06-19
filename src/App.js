@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 // Components
 import Header from "./Components/Header";
+import Hero from "./Components/Hero";
 import AboutMe from "./Components/About";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
@@ -68,20 +69,25 @@ function App() {
         />
       </Helmet>
       <Header navRoute={navRoute} />
-      <main>
-        <section id="about" className="section section-about">
-          <AboutMe />
-        </section>
-        <section id="skills" className="section section-skills">
-          <Skills />
-        </section>
-        <section id="projects" className="section section-projects">
-          <Projects projects={projects} />
-        </section>
-        <section id="contact" className="section section-contact">
-          <Contacts />
-        </section>
-      </main>
+      <div className="content">
+        <main className="fill-height">
+          <section id="hero" className="section section-hero">
+            <Hero />
+          </section>
+          <section id="about" className="section section-about">
+            <AboutMe />
+          </section>
+          {/* <section id="skills" className="section section-skills">
+            <Skills />
+          </section> */}
+          <section id="projects" className="section section-projects">
+            <Projects projects={projects} />
+          </section>
+          <section id="contact" className="section section-contact">
+            <Contacts />
+          </section>
+        </main>
+      </div>
       <Footer year={currentYear} />
     </div>
   );

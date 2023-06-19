@@ -1,0 +1,114 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0px;
+}
+
+.landing__content {
+    position: absolute;
+    font-size: 24px;
+    color: var(--white);
+    left: 8%;
+    top: 32%;
+}
+
+.big-heading {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+}
+
+.hero h1 {
+    margin: 0px 0px 30px 4px;
+    /* color: var(--green); */
+    font-family: var(--font-mono);
+    font-size: clamp(14px, 5vw, 16px);
+    font-weight: 400;
+}
+
+.landing__content .text-zone .fancy {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: #ccd6f6;
+}
+
+.landing__content .text-zone .fancy span {
+    font-size: 100%;
+}
+
+.landing__content .text-zone .fancy span:nth-child(3) {
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.landing__content h2 {
+    margin-bottom: 10px;
+}
+
+/* .landing__content::after{
+    content: '';
+    height: 3px;
+    border: 1px solid var(--white);
+    margin-left: 10px;
+} */
+
+.landing__content p {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    /* width: 150px;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer; */
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 50px;
+}
+
+.light .link {
+    color: #494949;
+    border: 1px solid #4f4f4f;
+}
+
+.light .link:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 5px 5px 0px 2px #4f4f4f;
+}
+
+.dark .link {
+    color: #e4e2e2;
+    border: 1px solid #e4e2e2;
+}
+
+.dark .link:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 5px 5px 0px 2px #e4e2e2;
+}
+
+.btn:hover {
+    border: 1px solid transparent;
+    background: #3399FF;
+    transition: 0.5s;
+}
+
+
+.btn-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

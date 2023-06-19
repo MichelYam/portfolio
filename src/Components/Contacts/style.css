@@ -11,9 +11,9 @@
 } */
 
 .section-contact .email {
-    color: #3399FF;
+    color: #494949;
     background-color: transparent;
-    border: 1px solid #3399FF;
+    border: 1px solid #4f4f4f;
     border-radius: 5px;
     padding: 1.25rem 1.75rem;
     font-size: 14px;
@@ -23,6 +23,21 @@
 
     margin-top: 50px;
     display: inline-block;
+}
+
+.dark .section-contact .email {
+    color: #e4e2e2;
+    border: 1px solid #e4e2e2;
+}
+
+.light .section-contact .email:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 5px 5px 0px 2px #4f4f4f;
+}
+
+.dark .section-contact .email:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 5px 5px 0px 2px #e4e2e2;
 }
 
 .contact-form {
